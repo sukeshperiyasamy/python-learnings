@@ -1,0 +1,22 @@
+a="sukesh codes"
+print(a)
+print(len(a))
+print(a.isalpha())
+print(a.isalnum())
+print(a.capitalize())
+print(a.upper())
+print(a.lower())
+print(a.title())
+print(a.count('e'))
+print(a.find("o"))
+print(a.find("es"))
+print(a.isupper())
+print(a.islower())
+print(a.replace(" ","-"))
+print(a.endswith("s"))
+print(type(a))
+
+b="sukesh\nsubash"
+print(b)
+print(b.splitlines())
+print(b.splitlines(True))

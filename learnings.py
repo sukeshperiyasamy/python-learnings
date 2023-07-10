@@ -569,3 +569,178 @@ def biodata(**data):
 
 biodata(name="sukesh",age=22,gender="male")
 
+# Default Parameter Function in Python
+
+def user(name,city="karur"):
+    print(name,"is comming from",city)
+    
+user("sukesh")
+user("subash","cbe")
+
+# Passing a List as an Argument in Function Python
+def totalmarks(marks):
+    return sum(marks)
+    
+print("total",totalmarks([10,20,30,40,50,60]))
+
+# Recursion Function in Python
+
+def factorial(x):
+    if x==1:
+        return 1
+    else:
+       return x*factorial(x-1)
+       
+print("factorial :", factorial(6))
+
+# lambda function
+c=lambda a:a+50
+print(c(10))
+    
+c=lambda a,b: a*b
+print(c(5,10))
+
+# date time in python
+
+
+import datetime as dt
+
+date=dt.date.today()
+print(date)
+
+
+import datetime as dt
+
+date=dt.date.today()
+print(date)
+
+
+new =dt.date(2002, 2, 19)
+print(new)
+print(new.year)
+print(new.month)
+print(new.day)
+
+a=dt.time(10,44,20,555)
+print(a)
+print(a.hour)
+print(a.minute)
+print(a.second)
+print(a.microsecond)
+
+b=dt.datetime.now()
+print(b)
+print(b.time())
+print(b.date())
+
+c=dt.datetime(2010,10,19,21,20,19)
+print(c)
+print(c.time())
+print(c.date())
+
+current_year = dt.datetime.now()
+new_year = dt.datetime(2022,12,31)
+diff=current_year - new_year
+print(diff)
+
+
+symbol=dt.datetime.now()
+print(symbol)
+a=symbol.strftime("%Y %B %A %H %M %S %f")
+print(a)
+
+
+# math package
+
+
+import math
+
+print(math.sqrt(5))
+print(math.ceil(1.555))
+print(math.floor(3.555))
+print(math.factorial(5))
+print(math.fabs(5))
+print(math.fabs(-55))
+print(math.pow(2,3))
+print(math.log2(199))
+print(math.log10(100))
+print(math.pi)
+print(math.e)
+
+
+
+# try block
+
+try:
+    a=10/0
+except Exception as e:
+    print(e)
+
+try:
+    a=10/10
+except Exception as e:
+    print(e)
+else:
+    print("else block working")
+    
+try:
+    a=10/0
+except Exception as e:
+    print(e)
+else:
+    print("else block working")
+finally:
+    print("thank you")
+    
+    # types of exception
+    print(dir(locals()['__builtins__']))
+print(len(dir(locals()['__builtins__'])))
+
+# name error exception
+try:
+    print(a)
+except Exception as i:
+    print(i)
+
+
+try:
+    print(a)
+except Nameerror:
+    print("a in not ")
+
+
+    
+try:
+    a=10/0
+except ZeroDivisionError:
+    print("error")
+    
+try:
+    a=int("str")
+except ValueError:
+    print("value error")
+        
+try:
+    a=[10,20,30,40]
+    print(a[10])
+    
+except IndexError:
+    print("index error")
+    
+try:
+    f=open("text.txt")
+except FileNotFoundError:
+    print("fille not found")
+else:
+        print(f.read())
+
+# handling multiple error 
+try:
+    a=10/20
+    print(a)
+    b=[10,20,30,40]
+    print(b[10])
+except ZeroDivisionError:
+    print("a oda error")
+except IndexError:
+    print ("invalid error")

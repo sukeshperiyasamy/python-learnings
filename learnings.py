@@ -323,4 +323,249 @@ b.sort(key=len)
 print(b)
 # tuples
 # immutable
+a=("a","b",21,"sukesh",True,35.5)
+print(a)
+print(type(a))
+print(a[1])
+print(a[0:1])
+print(len(a))
+print (type(a[0]))
+print(a)
+b=list(a)
+print(b)
+b.append("subash")
+print(b)
+b.insert(22,33)
+print(b)
+a=tuple(b)
+print(a)
+for i in a:
+    print(i)
+if "sukesh" in a:
+    print("yes")
+else:
+    print("no")
+a=(1,2,3,4,5,6,7,8)
+b=(9,10,11,12,13,14,15,16,17)
+c=a+b
+print(c)
+print(len(c))
+print(c.count(1))
+c=(a,b)
+print(c)
+print(min(a))
+print(max(a))
+
+x=("sukesh",)*5
+print(x)
+
+# set
+a={1,2,3,4,5}
+b={5,6,7,8,9,10}
+name={"sukesh","subash","suk","sam","selva"}
+print(name)
+print(type(name))
+for i in name:
+    print(i)
+name.add("sara")
+print(name)
+name.update(a)
+print(name)
+name.remove(1)
+print(name)
+name.discard(1)
+print(name)
+name.pop()
+print(name)
+name.clear()
+print(name)
+del name
+print(name)
+name={"sukesh","subash","suk","sam","selva","sukesh"}
+print(name)
+print(len(name))
+# with numbers
+a={1,2,3,4,5}
+b={5,6,7,8,9,10}
+c={'a','b','c'}
+d=a.union(b)
+print(d)
+e=a.union(c)
+print(e)
+
+a.update(b)
+print(a)
+a={1,2,3,4,5}
+b={5,6,7,8,9,10}
+
+c=a.intersection(b)
+print(c)
+a.intersection_update(b)
+print(a)
+a={1,2,3,4,5}
+b={5,6,7,8,9,10}
+c=a.symmetric_difference(b)
+print(c)
+a.symmetric_difference_update(b)
+print(a)
+
+a={5,6,7,8,9,10}
+b={5,6,7,8,9}
+c=a.isdisjoint(b)
+print(c)
+
+c=a.issubset(b)
+print(c)
+c=a.issuperset(b)
+print(c)
+
+
+# dictionary
+a={
+    "name":"sukesh",
+    "age": 22,
+    "isstudying":True,
+}
+print(a)
+print(type(a))
+print(a["name"])
+print(a["age"])
+print(a.get("isstudying"))
+
+print(a.keys())
+print(a.values())
+print(a.items())
+for i in a:
+    print(i,"",a[i])
+    
+for i in a.values():
+    print(i)
+
+for i in a.keys():
+    print(i)
+for x,y in a.items():
+    print(x,y)
+    
+if "age" in a:
+    print("yes")
+
+if "gender" in a:
+    print("gender")
+
+a.update({"gender":"male"})
+print(a)
+a["age"]=32
+print(a)
+
+a.pop("age")
+print(a)
+a.clear()
+print(a)
+del a
+print(a)
+user={
+    "a": {
+    "name":"sukesh",
+    "age": 22,
+    "isstudying":True,
+}
+ "b": {
+    "name":"subash",
+    "age": 25,
+    "isstudying":false,
+}
+}
+print(user)
+
+
+# is is not 
+a=[1,2]
+b=[1,2]
+c=[1,2]
+d=a
+print(a is d)
+print( a is not d)
+print(a == d)
+print (a != d)
+
+print ( a is b)
+print(a is not b)
+print (a == b)
+print(a!=b)
+print ( a is c)
+
+# member function list tuple are in atha or not
+
+a=[10,33,55,66,77,88,45]
+print(45 in a)
+print(22 in a)
+print (22 not in a)
+
+# functions
+def welcome():
+    print("welcome to tutor joes")
+
+welcome()
+welcome()
+welcome()
+welcome()
+
+#  9types
+# No Return Type Without Argument Function in Python
+def add():
+    a=int(input("enter a: "))
+    b=int(input("wnter b: "))
+    c=a+b
+    print("total : ",c)
+
+add()
+
+# No Return Type With Argument Function in Python
+def sub(a,b):
+    
+    c=a-b
+    print("total : ",c)
+
+sub(222,111)
+# Return Type Without Argument Function in Python
+def mul():
+    a=int(input("enter a: "))
+    b=int(input("enter b: "))
+    c=a*b
+    return c
+
+print("total :",mul())
+
+x=mul()
+print("total",x)
+
+
+# Return Type With Argument Function in Python
+
+def div(a,b):
+    c=a/b
+    return c
+
+x=div(10,5)
+print("value",x)
+
+
+# Arbitrary Arguments Function in Python
+
+def user(*students):
+    print(students)
+    for i in students:
+        print(i)
+user("ram","sam")
+# Keyword Arguments Function in Python
+
+def student(name,age):
+    print(name,"age is ",age)
+
+student(age=22,name="sukesh")
+# Arbitrary Keyword Arguments in Python
+def biodata(**data):
+    print(data)
+
+biodata(name="sukesh",age=22,gender="male")
 
